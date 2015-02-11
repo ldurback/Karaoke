@@ -9,19 +9,19 @@ using System.Diagnostics;
 
 namespace MP3Parser
 {
-    public class Main
+    static public class Parser
     {
-        public void ParseDirectoryRecursively(string rootDirectory)
+        static public void ParseDirectoryRecursively(string rootDirectory)
         {
             foreach (string path in Directory.EnumerateFiles(rootDirectory, "*.mp3", SearchOption.AllDirectories))
             {
-                TagLib.Mpeg.File tagFile = null;
+                TagLib.Mpeg.AudioFile file = null;
 
                 try
                 {
-                    tagFile = (TagLib.Mpeg.File)TagLib.File.Create(path);
+                    file = (TagLib.Mpeg.AudioFile)TagLib.File.Create(path);
 
-                    if (tagFile == null)
+                    if (file == null)
                         throw new Exception("Opening file returned null");
                 }
                 catch (Exception e)
@@ -29,6 +29,9 @@ namespace MP3Parser
                     Debug.WriteLine(path + " cannot be opened.  Ignoring.  Exception had message: " + e.Message);
                     continue;
                 }
+
+                Debug.WriteLine("Tags in file " + path + ": ");
+                Debug.WriteLine(file.TagTypes);
             }
         }
     }
