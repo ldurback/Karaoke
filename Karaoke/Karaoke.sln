@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karaoke", "Karaoke\Karaoke.csproj", "{97604A23-A3B7-482F-BDAE-D09B1D61B774}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaraokeGUI", "Karaoke\KaraokeGUI.csproj", "{D4EE9D4E-F992-4D95-99A6-92581576201A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP3Parser", "KaraokeParser\MP3Parser.csproj", "{D057548B-330D-4867-9692-0B50A41C7553}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{97604A23-A3B7-482F-BDAE-D09B1D61B774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97604A23-A3B7-482F-BDAE-D09B1D61B774}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97604A23-A3B7-482F-BDAE-D09B1D61B774}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97604A23-A3B7-482F-BDAE-D09B1D61B774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4EE9D4E-F992-4D95-99A6-92581576201A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4EE9D4E-F992-4D95-99A6-92581576201A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4EE9D4E-F992-4D95-99A6-92581576201A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4EE9D4E-F992-4D95-99A6-92581576201A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D057548B-330D-4867-9692-0B50A41C7553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D057548B-330D-4867-9692-0B50A41C7553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D057548B-330D-4867-9692-0B50A41C7553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D057548B-330D-4867-9692-0B50A41C7553}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
