@@ -39,7 +39,7 @@ namespace Karaoke
 
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
-            MediaPlayer.Stop(); 
+            MediaPlayer.Stop();
         }
 
         private void BrowseButton_Click(object sender, RoutedEventArgs e)
@@ -60,13 +60,18 @@ namespace Karaoke
 
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
             timer.Start();
+            lblTimer.Content = String.Format("{0} / {1}", MediaPlayer.Position.ToString(@"mm\:ss"), MediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
+        }
 
+        void timer_Tick(object sender, EventArgs e)
+        {
             if (MediaPlayer.Source != null)
-                lblTimer.Content = String.Format("{0} / {1}", MediaPlayer.Position.ToString(@"mm\:ss"), MediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
-            else
-                lblTimer.Content = "No file selected...";
-
+            {
+                if (MediaPlayer.NaturalDuration.HasTimeSpan)
+                    lblTimer.Content = String.Format("{0} / {1}", MediaPlayer.Position.ToString(@"mm\:ss"), MediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
+            }
         }
     }
 }
