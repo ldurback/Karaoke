@@ -47,10 +47,12 @@ namespace Karaoke
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.AddExtension = true;
             ofd.DefaultExt = "*.*";
-            ofd.Filter = "Media(*.*)|*.*";
+            ofd.Filter = "Media|*.mp4;*.avi;*.flv,*.mp3";
             ofd.ShowDialog();
             MediaPlayer.MediaOpened += new RoutedEventHandler(MediaPlayer_MediaOpened);
-            MediaPlayer.Source = new Uri(ofd.FileName);
+
+            if (MediaPlayer.Source != null)
+                MediaPlayer.Source = new Uri(ofd.FileName);
         }
 
 
