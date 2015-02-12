@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Karaoke Plus" Height="350" Width="525" >
     <Grid>
-        <MediaElement LoadedBehavior="Manual" Name="MediaPlayer" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="266" Stretch="Fill" />
+        <MediaElement LoadedBehavior="Manual" Name="MediaPlayer" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="266" Stretch="Fill" MediaFailed="MediaPlayer_MediaFailed" />
         <Button Content="Browse" Name="BrowseButton" HorizontalAlignment="Left" Margin="340,273,0,0" VerticalAlignment="Top" Width="105" Height="36" Click="BrowseButton_Click"/>
         <Button Content="Pause" Name="PauseButton" HorizontalAlignment="Left" Margin="297,233,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.524,-0.785" Click="PauseButton_Click"/>
         <Button Content="Stop" Name="StopButton" HorizontalAlignment="Left" Margin="389,196,0,0" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.5,0.5" Click="StopButton_Click" Height="57"/>

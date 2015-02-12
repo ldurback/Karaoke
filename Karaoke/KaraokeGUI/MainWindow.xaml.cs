@@ -29,7 +29,9 @@ namespace Karaoke
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            MediaPlayer.Play();
+                MediaPlayer.MediaFailed += MediaPlayer_MediaFailed;
+                MediaPlayer.Play();
+                
         }
 
         private void PauseButton_Click(object sender, RoutedEventArgs e)
@@ -72,6 +74,11 @@ namespace Karaoke
                 if (MediaPlayer.NaturalDuration.HasTimeSpan)
                     lblTimer.Content = String.Format("{0} / {1}", MediaPlayer.Position.ToString(@"mm\:ss"), MediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
             }
+        }
+
+        private void MediaPlayer_MediaFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+            MessageBox.Show(e.ErrorException.Message);
         }
     }
 }
