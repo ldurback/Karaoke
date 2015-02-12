@@ -59,7 +59,7 @@ namespace Karaoke
 
         void MediaPlayer_MediaOpened(object sender, RoutedEventArgs e)
         {
-            SongText.Text = MediaPlayer.Source.ToString();
+            SongText.Text = MediaPlayer.Source.LocalPath.ToString();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Start();
             lblTimer.Content = String.Format("{0} / {1}", MediaPlayer.Position.ToString(@"mm\:ss"), MediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
