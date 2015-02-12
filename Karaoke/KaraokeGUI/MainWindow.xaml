@@ -3,13 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Karaoke Plus" Height="350" Width="525" >
     <Grid>
-        <MediaElement LoadedBehavior="Manual" Name="MediaPlayer" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="266" Stretch="Fill" MediaFailed="MediaPlayer_MediaFailed" />
-        <Button Content="Browse" Name="BrowseButton" HorizontalAlignment="Left" Margin="340,273,0,0" VerticalAlignment="Top" Width="105" Height="36" Click="BrowseButton_Click"/>
-        <Button Content="Pause" Name="PauseButton" HorizontalAlignment="Left" Margin="297,233,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.524,-0.785" Click="PauseButton_Click"/>
-        <Button Content="Stop" Name="StopButton" HorizontalAlignment="Left" Margin="389,196,0,0" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.5,0.5" Click="StopButton_Click" Height="57"/>
-        <TextBox Name="SongText" HorizontalAlignment="Left" Height="101" Margin="297,85,0,0" TextWrapping="Wrap" Text="File Info" IsReadOnly="True" VerticalAlignment="Top" Width="185"/>
-        <Button Content="Play" Name="PlayButton" HorizontalAlignment="Left" Margin="297,196,0,0" VerticalAlignment="Top" Width="75" Click="PlayButton_Click"/>
-        <Label Content="" Name="lblTimer" HorizontalAlignment="Left" Margin="309,34,0,0" VerticalAlignment="Top" Width="173"/>
+        <Button Content="Browse" Name="BrowseButton" HorizontalAlignment="Left" Margin="402,289,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="BrowseButton_Click"/>
+        <Button Content="Pause" Name="PauseButton" HorizontalAlignment="Left" Margin="139,289,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.524,-0.785" Click="PauseButton_Click"/>
+        <Button Content="Stop" Name="StopButton" HorizontalAlignment="Left" Margin="264,289,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" Click="StopButton_Click" Height="20"/>
+        <TextBox Name="SongText" HorizontalAlignment="Left" Height="27" Margin="99,257,0,0" TextWrapping="Wrap" Text="                     Click the Browse Button, Then the Play Button to run" IsReadOnly="True" VerticalAlignment="Top" Width="408"/>
+        <Button Content="Play" Name="PlayButton" HorizontalAlignment="Left" Margin="10,289,0,0" VerticalAlignment="Top" Width="75" Click="PlayButton_Click"/>
+        <Label Content="" Name="lblTimer" HorizontalAlignment="Left" Margin="10,257,0,0" VerticalAlignment="Top" Width="84"/>
+        <MediaElement HorizontalAlignment="Left" Height="242" Margin="10,10,0,0" VerticalAlignment="Top" Width="497" LoadedBehavior="Manual" Name="MediaPlayer" Stretch="Fill" MediaFailed="MediaPlayer_MediaFailed" />
 
     </Grid>
 </Window>
